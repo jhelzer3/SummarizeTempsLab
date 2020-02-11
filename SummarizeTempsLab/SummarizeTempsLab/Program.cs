@@ -8,10 +8,13 @@ namespace SummarizeTempsLab
     {
         static void Main(string[] args)
         {
-            if (File.Exists("temps.txt"))
+            Console.WriteLine("enter file name");
+            string fileName = Console.ReadLine();
+
+            if (File.Exists(fileName))
             {
 
-                using (StreamReader sr = File.OpenText("temps.txt"))
+                using (StreamReader sr = File.OpenText(fileName))
                 {
                     bool LetsRunThisBack = true;
                     while (LetsRunThisBack == true)
